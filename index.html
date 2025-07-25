@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Agus</title>
+  <link rel="stylesheet" href="./index.css">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@800&family=Lato:wght@400;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+      background: linear-gradient(180deg, #161616 27%, black 100%);
+      color: white;
+    }
+    .section-title {
+      font-family: 'Bricolage Grotesque', sans-serif;
+    }
+    .glass-card {
+    background: rgba(217, 217, 217, 0.05);
+    border: 1px solid #6C6C6C;
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(9.8px);
+    border-radius: 1.5rem;
+  }
+  </style>
+</head>
+<body class="overflow-x-hidden">
+
+  <header class="fixed top-0 left-0 w-full z-50 bg-[#0e0e0e]/80 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto w-full flex justify-between items-center px-8 py-4">
+      <img src="./assets/logo.png" alt="Logo" class="w-22 h-auto">
+      <div class="flex space-x-6 mt-12">
+        <img src="./assets/linked_in_logo.png" class="w-13 h-13" alt="linked_in_logo">
+        <img src="./assets/github_logo.png" class="w-13 h-13" alt="github_logo">
+        <img src="./assets/email_logo.png" class="w-13 h-13" alt="email_logo">
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-24">
+    <section class="relative flex flex-col md:flex-row items-center justify-center px-8 py-12 space-y-8 md:space-y-0 md:space-x-10 mt-12">
+      <img src="./assets/grid.png" alt="" class="absolute  -z-10  " />
+      
+      <model-viewer class="z-20" src="./assets/custom_ore_portfolio.glb" alt="compaq" auto-rotate camera-controls auto-rotate-delay="0" camera-orbit="-90deg 0 0" interaction-prompt="none" disable-zoom style="width:250px;height:250px"></model-viewer>
+      <div class="max-w-xl text-center md:text-left">
+        <h1 class="say-hi text-5xl font-extrabold section-title ">HI, I’M AGUS</h1>
+        <p class="mt-4 text-lg text-gray-300 italic border-l-2 border-b-2 border-white pl-4 pb-2">
+        I’m an <strong>advanced Software Engineering student </strong> with a strong passion for designing and developing responsive, secure, and efficient systems for data management. I focus on building solutions that are not only functional but also optimized for performance, being confortable on both high and low level programing. I enjoy working across all layers of a system, from architecture to implementation, and focus on writing clean, maintainable, and scalable code. My academic background, combined with a hands-on approach to problem-solving, allows me to create solutions that are orientated to real-world needs.
+        </p>
+      </div>
+    </section>
+    <img src="./assets/vaporwave_sun.png" alt="Vaporwave Sun" class="absolute left-1/2 -translate-x-1/2 top-43 -z-10 w-[1000px] opacity-80 pointer-events-none ">
+    <section class="py-20 px-8">
+      <h2 class="text-8xl font-extrabold tech-stack section-title ">TECH STACK</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-5">
+        <div class="glass-card p-4 flex flex-col items-center">
+          <h3 class="text-3xl font-bold">WEB DEV.</h3>
+          <div class="flex space-x-4 mt-4">
+            <img src="./assets/html.png" class="w-16" alt="HTML">
+            <img src="./assets/css.png" class="w-16" alt="CSS">
+            <img src="./assets/js.png" class="w-16" alt="JavaScript">
+          </div>
+        </div>
+        <div class="glass-card p-4 flex flex-col items-center">
+          <h3 class="text-3xl font-bold">LANGUAGES</h3>
+          <div class="flex space-x-4 mt-4">
+            <img src="./assets/java.png" class="w-16" alt="Java">
+            <img src="./assets/python.png" class="w-16" alt="Python">
+          </div>
+        </div>
+        <div class="glass-card p-4 flex flex-col items-center">
+          <h3 class="text-3xl font-bold">TOOLS</h3>
+          <div class="flex space-x-4 mt-4">
+            <img src="./assets/git.png" class="w-16" alt="Git">
+            <img src="./assets/github.png" class="w-16" alt="GitHub">
+          </div>
+        </div>
+        <div class="glass-card p-4 flex flex-col items-center">
+          <h3 class="text-3xl font-bold">VCS</h3>
+          <div class="flex space-x-4 mt-4">
+            <img src="./assets/figma.png" class="w-16" alt="Figma">
+            <img src="./assets/docker.png" class="w-16" alt="Docker">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 px-8">
+      <h2 class="text-6xl font-extrabold text-[#83DAD5] section-title">MY PROJECTS</h2>
+      <div class="grid md:grid-cols-2 gap-12 mt-12">
+        <div class="glass-card p-6 rounded-3xl shadow-lg">
+          <h3 class="text-3xl font-bold mb-4">PATIENT MANAGEMENT SYSTEM</h3>
+          <img src="./assets/project1.png" class="rounded-lg mb-4" alt="">
+          <p class="text-gray-300">
+            Web platform for occupational therapy. Patients register personal data...
+          </p>
+        </div>
+        <div class="glass-card p-6 rounded-3xl shadow-lg">
+          <h3 class="text-3xl font-bold mb-4">BLOODYHELL! A MINECRAFT MOD</h3>
+          <img src="./assets/project2.png" class="rounded-lg mb-4" alt="">
+          <p class="text-gray-300">
+            Bloody Hell! is a Minecraft mod built entirely in Java using the Forge API...
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</body>
+</html>

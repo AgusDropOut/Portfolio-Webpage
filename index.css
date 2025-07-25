@@ -1,0 +1,15 @@
+.say-hi{
+  background: linear-gradient(92deg, #83DAD5 15.07%, #E12885 69.31%);
+  -webkit-background-clip: text;  /* Necesario para Chrome, Edge, Safari */
+  -webkit-text-fill-color: transparent; /* Hace transparente el texto */
+  background-clip: text;
+  
+}
+
+.tech-stack{
+  background: linear-gradient(90deg,#E12885  15.07%, #83DAD5 69.31%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
