@@ -6,6 +6,47 @@
   
 }
 
+.normal-text {
+  font-family: 'Inter', sans-serif;
+  color: #ffffff; 
+  font-weight: 300;
+}
+
+.text-section{
+  font-family: 'Lato', sans-serif;
+  color: #ffffff; 
+  font-weight: 400;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#ascii {
+  white-space: pre;           
+  font-family: monospace;    
+  font-size: 8px;            
+  line-height: 8px;           
+  color: #E0E0E0;             
+  background-color: black;    
+  text-align: center;         
+  margin: 0 auto;             
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#full-stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#ascii-gif {
+  backdrop-filter: blur(2px);
+}
+
+
 .tech-stack{
   background: linear-gradient(90deg,#E12885  15.07%, #83DAD5 69.31%);
   background-clip: text;
@@ -13,3 +54,79 @@
   -webkit-text-fill-color: transparent;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+.scale-on-hover {
+  transition: transform 0.3s ease;
+  will-change: transform; /* para mejorar el rendimiento */
+}
+
+.scale-on-hover:hover {
+  transform: scale(1.05);
+}
+
+#projects {
+  position: relative; /* ya lo estás dando con tailwind, pero por las dudas */
+  overflow: hidden;
+}
+
+#projects-stars {
+  position: absolute;
+  inset: 0;
+  z-index: -1;            /* queda detrás del contenido */
+  pointer-events: none;   /* no bloquea clics */
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Cuando está visible */
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+@media (max-width: 640px) {
+  body, html {
+    overflow-x: hidden !important;
+    max-width: 100vw;
+  }
+  .px-8 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  .text-8xl {
+    font-size: 2.5rem !important;
+    line-height: 1.1 !important;
+  }
+  .ml-10 {
+    margin-left: 0 !important;
+  }
+  .w-\[1000px\] {
+    width: 100vw !important;
+    min-width: 0 !important;
+    max-width: 100vw !important;
+  }
+  img, video, model-viewer {
+    max-width: 100%;
+    height: auto;
+  }
+  .max-w-6xl, .max-w-xl {
+    max-width: 100vw !important;
+  }
+  .px-4 {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  .mi-grid-ancha {
+    width: 350vw !important;   /* O el valor que prefieras */
+    max-width: none !important;
+    
+  }
+}

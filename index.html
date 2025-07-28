@@ -8,6 +8,14 @@
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@800&family=Lato:wght@400;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
   <style>
     body {
       font-family: 'Lato', sans-serif;
@@ -29,85 +37,200 @@
 <body class="overflow-x-hidden">
 
   <header class="fixed top-0 left-0 w-full z-50 bg-[#0e0e0e]/80 backdrop-blur-md border-b border-white/10">
-    <div class="max-w-7xl mx-auto w-full flex justify-between items-center px-8 py-4">
-      <img src="./assets/logo.png" alt="Logo" class="w-22 h-auto">
-      <div class="flex space-x-6 mt-12">
-        <img src="./assets/linked_in_logo.png" class="w-13 h-13" alt="linked_in_logo">
-        <img src="./assets/github_logo.png" class="w-13 h-13" alt="github_logo">
-        <img src="./assets/email_logo.png" class="w-13 h-13" alt="email_logo">
+  <div class="max-w-7xl mx-auto w-full flex justify-between items-center px-4 sm:px-8 py-4">
+    <img src="./assets/logo.png" alt="Logo" class="w-20 h-auto max-w-full">
+      <div class="flex gap-3 sm:gap-6 items-center">
+        <img src="./assets/linked_in_logo.png" class="w-12 h-12 sm:w-12 sm:h-12 2xl:w-16 2xl:h-16 max-w-full scale-on-hover" alt="linked_in_logo">
+        <img src="./assets/github_logo.png" class="w-12 h-12 sm:w-12 sm:h-12 2xl:w-16 2xl:h-16 max-w-full scale-on-hover" alt="github_logo">
+        <img src="./assets/email_logo.png" class="w-12 h-12 sm:w-12 sm:h-12 2xl:w-16 2xl:h-16 max-w-full scale-on-hover" alt="email_logo">
       </div>
     </div>
   </header>
 
   <main class="pt-24">
     <section class="relative flex flex-col md:flex-row items-center justify-center px-8 py-12 space-y-8 md:space-y-0 md:space-x-10 mt-12">
-      <img src="./assets/grid.png" alt="" class="absolute  -z-10  " />
+      <img src="./assets/grid.png" alt="" class="absolute sm:object-none  -z-10 mi-grid-ancha " />
       
       <model-viewer class="z-20" src="./assets/custom_ore_portfolio.glb" alt="compaq" auto-rotate camera-controls auto-rotate-delay="0" camera-orbit="-90deg 0 0" interaction-prompt="none" disable-zoom style="width:250px;height:250px"></model-viewer>
-      <div class="max-w-xl text-center md:text-left">
-        <h1 class="say-hi text-5xl font-extrabold section-title ">HI, I’M AGUS</h1>
-        <p class="mt-4 text-lg text-gray-300 italic border-l-2 border-b-2 border-white pl-4 pb-2">
-        I’m an <strong>advanced Software Engineering student </strong> with a strong passion for designing and developing responsive, secure, and efficient systems for data management. I focus on building solutions that are not only functional but also optimized for performance, being confortable on both high and low level programing. I enjoy working across all layers of a system, from architecture to implementation, and focus on writing clean, maintainable, and scalable code. My academic background, combined with a hands-on approach to problem-solving, allows me to create solutions that are orientated to real-world needs.
+      <div class="max-w-2xl text-left sm:text-left  border-l-2 border-b-2 border-white">
+        <h1 class="say-hi text-6xl font-extrabold section-title animate-on-scroll pl-7 pb-1">HI, I’M AGUS</h1>
+        <p class="normal-text mt-3 text-lg italic pl-7 pb-4 ">
+        I’m an advanced<strong class="font-extrabold"> Software Engineering </strong> student with a strong passion for designing and developing responsive, secure, and efficient systems for data management. I focus on building solutions that are not only functional but also optimized for performance, being confortable on both high and low level programing. <br>
+         I enjoy working across all layers of a system, from architecture to implementation, and focus on writing clean, maintainable, and scalable code. My academic background, combined with a hands-on approach to problem-solving, allows me to create solutions that are orientated to real-world needs.
         </p>
       </div>
     </section>
-    <img src="./assets/vaporwave_sun.png" alt="Vaporwave Sun" class="absolute left-1/2 -translate-x-1/2 top-43 -z-10 w-[1000px] opacity-80 pointer-events-none ">
-    <section class="py-20 px-8">
-      <h2 class="text-8xl font-extrabold tech-stack section-title ">TECH STACK</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-5">
-        <div class="glass-card p-4 flex flex-col items-center">
-          <h3 class="text-3xl font-bold">WEB DEV.</h3>
-          <div class="flex space-x-4 mt-4">
-            <img src="./assets/html.png" class="w-16" alt="HTML">
-            <img src="./assets/css.png" class="w-16" alt="CSS">
-            <img src="./assets/js.png" class="w-16" alt="JavaScript">
+    <img id="vaporwave-sun" src="./assets/vaporwave_sun.png" alt="Vaporwave Sun" class="absolute animate-on-scroll left-1/2 -translate-x-1/2 top-43 -z-10 w-[1000px] opacity-80 pointer-events-none">
+    <section class="py-20 px-4 max-w-full overflow-x-hidden">
+      <h2 id="tech-stack" class="text-5xl md:text-8xl font-extrabold tech-stack section-title animate-on-scroll">TECH STACK</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-5">
+        <div class="glass-card p-4 text-center animate-on-scroll">
+          <h3 class="text-2xl md:text-3xl font-bold">WEB DEV.</h3>
+          <div class="mt-4 grid grid-cols-2 gap-6 place-items-center">
+            <img src="./assets/html5.png" class="h-12 w-12 sm:h-16 sm:w-16 object-contain scale-on-hover" alt="HTML">
+            <img src="./assets/css3.png" class="h-12 w-12 sm:h-16 sm:w-16 object-contain scale-on-hover" alt="CSS">
+            <img src="./assets/js.png" class="h-12 w-12 sm:h-16 sm:w-16 object-contain scale-on-hover" alt="JavaScript">
+            <img src="./assets/php.png" class="h-12 w-12 sm:h-16 sm:w-16 object-contain scale-on-hover" alt="PHP">
+            <img src="./assets/postgresql.png" class="h-12 w-12 sm:h-16 sm:w-16 object-contain scale-on-hover" alt="PostgreSQL">
+            <img src="./assets/mysql.png" class="h-12 w-12 sm:h-16 sm:w-16 object-contain scale-on-hover" alt="MySQL">
+            <img src="./assets/mongodb.png" class="h-12 w-12 sm:h-16 sm:w-16 object-contain scale-on-hover" alt="MongoDB">
+            <img src="./assets/bootstrap5.png" class="h-12 w-12 sm:h-16 sm:w-16 object-contain scale-on-hover" alt="Bootstrap 5">
           </div>
         </div>
-        <div class="glass-card p-4 flex flex-col items-center">
-          <h3 class="text-3xl font-bold">LANGUAGES</h3>
-          <div class="flex space-x-4 mt-4">
-            <img src="./assets/java.png" class="w-16" alt="Java">
-            <img src="./assets/python.png" class="w-16" alt="Python">
+
+        <div class="grid grid-rows-2 gap-8">
+          <div class="glass-card p-4 text-center animate-on-scroll">
+            <h3 class="text-2xl md:text-3xl font-bold">LANGUAGES</h3>
+            <div class="mt-4 grid grid-cols-2 gap-4 place-items-center">
+              <img src="./assets/java.png" class="h-10 w-10 sm:h-16 sm:w-16 object-contain scale-on-hover" alt="Java">
+              <img src="./assets/python.png" class="h-10 w-10 sm:h-16 sm:w-16 object-contain scale-on-hover" alt="Python">
+              <img src="./assets/c++.png" class="h-10 w-10 sm:h-16 sm:w-16 object-contain scale-on-hover" alt="C++">
+              <img src="./assets/rust.png" class="h-10 w-10 sm:h-16 sm:w-16 object-contain scale-on-hover" alt="Rust">
+            </div>
           </div>
-        </div>
-        <div class="glass-card p-4 flex flex-col items-center">
-          <h3 class="text-3xl font-bold">TOOLS</h3>
-          <div class="flex space-x-4 mt-4">
-            <img src="./assets/git.png" class="w-16" alt="Git">
-            <img src="./assets/github.png" class="w-16" alt="GitHub">
-          </div>
-        </div>
-        <div class="glass-card p-4 flex flex-col items-center">
-          <h3 class="text-3xl font-bold">VCS</h3>
-          <div class="flex space-x-4 mt-4">
-            <img src="./assets/figma.png" class="w-16" alt="Figma">
-            <img src="./assets/docker.png" class="w-16" alt="Docker">
+          <div class="glass-card p-4 text-center animate-on-scroll">
+            <h3 class="text-2xl md:text-3xl font-bold">TOOLS</h3>
+            <div class="mt-4 grid grid-cols-3 gap-4 place-items-center">
+              <img src="./assets/git.png" class="h-10 w-10 sm:h-16 sm:w-16 object-contain scale-on-hover" alt="Git">
+              <img src="./assets/github.png" class="h-10 w-10 sm:h-16 sm:w-16 object-contain scale-on-hover" alt="GitHub">
+              <img src="./assets/figma.png" class="h-10 w-10 sm:h-16 sm:w-16 object-contain scale-on-hover" alt="Figma">
+              <img src="./assets/miro.png" class="h-10 w-10 sm:h-16 sm:w-16 object-contain scale-on-hover" alt="Miro">
+              <img src="./assets/bash.png" class="h-10 w-10 sm:h-16 sm:w-16 object-contain scale-on-hover" alt="Bash">
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-20 px-8">
-      <h2 class="text-6xl font-extrabold text-[#83DAD5] section-title">MY PROJECTS</h2>
-      <div class="grid md:grid-cols-2 gap-12 mt-12">
-        <div class="glass-card p-6 rounded-3xl shadow-lg">
-          <h3 class="text-3xl font-bold mb-4">PATIENT MANAGEMENT SYSTEM</h3>
-          <img src="./assets/project1.png" class="rounded-lg mb-4" alt="">
-          <p class="text-gray-300">
-            Web platform for occupational therapy. Patients register personal data...
-          </p>
-        </div>
-        <div class="glass-card p-6 rounded-3xl shadow-lg">
-          <h3 class="text-3xl font-bold mb-4">BLOODYHELL! A MINECRAFT MOD</h3>
-          <img src="./assets/project2.png" class="rounded-lg mb-4" alt="">
-          <p class="text-gray-300">
-            Bloody Hell! is a Minecraft mod built entirely in Java using the Forge API...
-          </p>
+    <section id="projects" class="py-20 px-8 relative overflow-hidden">
+    <!-- Fondo de estrellas solo para esta sección -->
+    <canvas id="projects-stars" class="absolute inset-0 -z-10 pointer-events-none"></canvas>
+
+    <h2 id="projects" class="text-8xl font-extrabold say-hi section-title ml-10 animate-on-scroll">MY PROJECTS</h2>
+    
+    <!-- Contenedor principal -->
+    <div class="w-full flex flex-col gap-12 mt-12 px-4 
+                [&>div:nth-child(odd)]:mr-auto 
+                [&>div:nth-child(even)]:ml-auto">
+      
+      <!-- Tarjeta 1 -->
+      <div class="max-w-6xl text-right items-end">
+        <div class="glass-card p-6 rounded-3xl shadow-lg animate-on-scroll">
+          <div class="grid lg:grid-cols-2 gap-6 items-center">
+            <div>
+              <h3 class="text-3xl text-section font-extrabold mb-4 text-left">PATIENT MANAGEMENT SYSTEM <i class="bi bi-link-45deg"></i></h3>
+              <p class=" text-section text-lg text-white text-justify">
+                Web platform for occupational therapy.
+                Patients register personal data, the therapist promotes them to medical records when needed.
+                Features include image uploads, insurance tracking, and medical referrals.
+                Focused on clarity, privacy, and efficiency.
+              </p>
+            </div>
+            <img src="./assets/patient_management_system-image_1.png" class="rounded-lg shadow-lg scale-on-hover" alt="">
+          </div>
+          <div class="grid lg:grid-cols-2 gap-6 mt-6 items-center">
+            <img src="./assets/patient_management_system-image_2.png" class="rounded-lg shadow-lg scale-on-hover" alt="">
+            <p class="text-justify text-lg text-section">
+              Built to streamline the therapist’s workflow 
+              while offering a friendly and secure
+              experience for patients. The system centralizes clinical and administrative data,
+              enabling faster access and better continuity of care.
+            </p>
+          </div>
         </div>
       </div>
-    </section>
+
+      <!-- Tarjeta 2 -->
+      <div class="max-w-6xl text-right items-end">
+        <div class="glass-card p-6 rounded-3xl shadow-lg animate-on-scroll">
+          <div class="grid lg:grid-cols-2 gap-6 items-center">
+            <div>
+              <h3 class="text-3xl text-section font-extrabold mb-4 text-left">BLOODYHELL! A MINECRAFT MOD <i class="bi bi-link-45deg"></i></h3>
+              <p class="text-section text-lg text-justify">
+                Bloody Hell! is a Minecraft mod built entirely in Java using the Forge modding API.
+                It features a dark, blood-themed dimension, custom mechanics, and unique entities.
+                Through this project, I strengthened my object-oriented programming skills and deepened my understanding of game logic,
+                custom rendering, and modular system design within a complex sandbox environment.
+              </p>
+            </div>
+            <img src="./assets/bloody_hell-image_1.png" class="rounded-lg shadow-lg scale-on-hover" alt="">
+          </div>
+          <div class="grid lg:grid-cols-2 gap-6 mt-6 items-center">
+            <img src="./assets/bloody_hell-image_2.png" class="rounded-lg shadow-lg scale-on-hover" alt="">
+          </div>
+        </div>
+      </div>
+
+      
+      
+    </div>
+  </section>
+
+  <div id="video-container" class="hidden fixed inset-0 z-40 flex flex-col items-center justify-center bg-black/80 space-y-4">
+    <video id="miku-video" src="./assets/miku_beam.mp4" class="max-w-full max-h-[80vh] rounded-lg shadow-lg" preload="auto"></video>
+    
+    <!-- Botón debajo del video -->
+    <button id="close-party" 
+      class="hidden mt-4 p-3 rounded-full bg-red-600 text-white hover:bg-red-700 shadow-lg transition-all duration-200">
+      <i class="bi bi-x-lg text-2xl"></i>
+    </button>
+  </div>
+
   </main>
+  <footer class="mt-24 border-t border-white/10 bg-[#0e0e0e]/60 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 py-10">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+        
+        <!-- Brand / mini bio -->
+        <div class="max-w-md">
+          <h3 class="text-xl font-bold">Agustín — Software Engineering</h3>
+          <p class="text-sm text-gray-400 mt-2">
+            Building responsive, secure & efficient systems. From low-level to high-level, siempre con foco en performance y clean code.
+          </p>
+        </div>
+
+        <!-- Quick nav -->
+        <nav class="flex flex-wrap gap-4 text-gray-300 text-sm">
+          <a href="#top" class="hover:text-white transition-colors">Home</a>
+          <a href="#tech-stack" class="hover:text-white transition-colors">Tech Stack</a>
+          <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+          <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+        </nav>
+
+        <!-- Social -->
+        <div class="flex items-center gap-4 text-2xl">
+          <!-- Con Bootstrap Icons -->
+          <a href="https://www.linkedin.com/in/TU-USUARIO" target="_blank" rel="noopener" aria-label="LinkedIn"
+            class="text-gray-300 hover:text-white transition-colors scale-on-hover">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="https://github.com/TU-USUARIO" target="_blank" rel="noopener" aria-label="GitHub"
+            class="text-gray-300 hover:text-white transition-colors scale-on-hover">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="mailto:tuemail@ejemplo.com" aria-label="Email"
+            class="text-gray-300 hover:text-white transition-colors scale-on-hover">
+            <i class="bi bi-envelope-fill"></i>
+          </a>
+        </div>
+
+        
+      </div>
+      
+
+      <div class="border-t border-white/10 mt-8 pt-6 text-center text-xs text-gray-500">
+        © <span id="year"></span> Agustín. All rights reserved. <button id="special-btn"class="shadow-lg hover:bg-purple-700"><i class="bi bi-star-fill text-yellow-500"></i></button>
+      </div>
+    </div>
+    
+</footer>
+
+  <script>
+  // Año automático
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script src="./script.js"></script> <!-- Tu archivo JS externo -->
 </body>
 </html>
