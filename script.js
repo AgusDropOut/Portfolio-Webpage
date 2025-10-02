@@ -14,14 +14,14 @@
       canvas.width  = rect.width;
       canvas.height = rect.height;
 
-      // Re-crear las estrellas al redimensionar para mantener densidad adecuada
+      
       stars = Array.from({ length: STAR_COUNT }, () => ({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        r: Math.random() * 1.6 + 0.4,             // tamaño
-        v: Math.random() * 0.9 + 0.2,             // velocidad vertical
+        r: Math.random() * 1.6 + 0.4,             
+        v: Math.random() * 0.9 + 0.2,             
         color: COLORS[Math.floor(Math.random() * COLORS.length)],
-        alpha: Math.random() * 0.6 + 0.4          // un poco de variación en brillo
+        alpha: Math.random() * 0.6 + 0.4         
       }));
     }
 
@@ -31,7 +31,7 @@
       for (const s of stars) {
         s.y += s.v;
         if (s.y - s.r > canvas.height) {
-            s.y = - (Math.random() * 500 + s.r);  // reaparece hasta 200px más arriba que el top
+            s.y = - (Math.random() * 500 + s.r); 
             s.x = Math.random() * canvas.width;
             s.v = Math.random() * 0.9 + 0.2;
             s.r = Math.random() * 1.6 + 0.4;
@@ -50,14 +50,8 @@
       requestAnimationFrame(draw);
     }
 
-    // Redimensionar cuando cambie el layout
+    
     window.addEventListener('resize', resizeCanvas);
-
-    // Si querés pausar cuando no está visible:
-    // const observer = new IntersectionObserver(([entry]) => {
-    //   running = entry.isIntersecting;
-    // });
-    // observer.observe(section);
 
     resizeCanvas();
     draw();
@@ -72,7 +66,6 @@
   const moveX = (e.clientX - centerX) * 0.02;
   const moveY = (e.clientY - centerY) * 0.02;
 
-  // Ahora mantenemos solo el centrado horizontal
   sun.style.transform = `translateX(-50%) translate(${moveX}px, ${moveY}px)`;
 });
 
@@ -82,13 +75,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('visible');  // entra a la vista
+        entry.target.classList.add('visible');  
       } else {
-        entry.target.classList.remove('visible'); // sale de la vista
+        entry.target.classList.remove('visible'); 
       }
     });
   }, {
-    threshold: 0.2 // 20% del elemento debe estar visible
+    threshold: 0.2 
   });
 
   elements.forEach(el => observer.observe(el));
@@ -99,11 +92,11 @@ document.addEventListener('DOMContentLoaded', () => {
 // =========================
 // Config
 // =========================
-const STAR_DELAY_MS = 10000; // <-- ajustá este delay para sincronizar con tu video (en ms)
-const LOOP_MIN_DELAY = 80;  // intervalo mínimo entre bursts
-const LOOP_MAX_DELAY = 200; // intervalo máximo entre bursts
-const BURSTS_PER_LOOP = 6;  // cuántos bursts por ciclo (subilo si querés aún más)
-const PARTICLES_PER_BURST = 120; // partículas por burst
+const STAR_DELAY_MS = 10000;
+const LOOP_MIN_DELAY = 80;  
+const LOOP_MAX_DELAY = 200; 
+const BURSTS_PER_LOOP = 6;  
+const PARTICLES_PER_BURST = 120; 
 
 // =========================
 // Estado
@@ -118,7 +111,7 @@ const defaults = {
   gravity: 0.8,
   decay: 0.92,
   startVelocity: 45,
-  colors: [ '#fcf08bff', '#ffed50ff', '#FFE400', '#FFFFFF'], // podés cambiar la paleta
+  colors: [ '#fcf08bff', '#ffed50ff', '#FFE400', '#FFFFFF'],
   shapes: ['star']
 };
 
@@ -132,8 +125,8 @@ function megaBurst() {
       particleCount: PARTICLES_PER_BURST,
       scalar: 1.2,
       origin: {
-        x: Math.random(),           // disparos en todo el ancho
-        y: Math.random() * 0.5      // mitad superior de la pantalla (ajustá si querés)
+        x: Math.random(),           
+        y: Math.random() * 0.5     
       }
     });
   }
@@ -171,13 +164,13 @@ function startParty() {
   video.currentTime = 0;
   video.play();
 
-  // Delay para sincronizar confetti con el momento del video
+
   starDelayTimer = setTimeout(() => {
     if (!partyActive) return;
     startConfettiLoop();
   }, STAR_DELAY_MS);
 
-  // (Opcional) Parar todo cuando el video termina
+ 
   video.onended = () => stopParty();
 }
 
