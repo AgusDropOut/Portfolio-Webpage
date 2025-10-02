@@ -1,7 +1,7 @@
 .say-hi{
   background: linear-gradient(92deg, #83DAD5 15.07%, #E12885 69.31%);
-  -webkit-background-clip: text;  /* Necesario para Chrome, Edge, Safari */
-  -webkit-text-fill-color: transparent; /* Hace transparente el texto */
+  -webkit-background-clip: text;  
+  -webkit-text-fill-color: transparent; 
   background-clip: text;
   
 }
@@ -60,7 +60,7 @@ body {
 
 .scale-on-hover {
   transition: transform 0.3s ease;
-  will-change: transform; /* para mejorar el rendimiento */
+  will-change: transform; 
 }
 
 .scale-on-hover:hover {
@@ -68,15 +68,15 @@ body {
 }
 
 #projects {
-  position: relative; /* ya lo estás dando con tailwind, pero por las dudas */
+  position: relative; 
   overflow: hidden;
 }
 
 #projects-stars {
   position: absolute;
   inset: 0;
-  z-index: -1;            /* queda detrás del contenido */
-  pointer-events: none;   /* no bloquea clics */
+  z-index: -1;           
+  pointer-events: none;  
 }
 
 .animate-on-scroll {
@@ -125,7 +125,7 @@ body {
     padding-right: 0.5rem !important;
   }
   .mi-grid-ancha {
-    width: 350vw !important;   /* O el valor que prefieras */
+    width: 350vw !important;  
     max-width: none !important;
     
   }
