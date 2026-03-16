@@ -109,63 +109,193 @@
 
     <h2 id="projects" class="text-8xl font-extrabold say-hi section-title ml-10 animate-on-scroll">MY PROJECTS</h2>
     
-    <!-- Contenedor principal -->
     <div class="w-full flex flex-col gap-12 mt-12 px-4 
                 [&>div:nth-child(odd)]:mr-auto 
                 [&>div:nth-child(even)]:ml-auto">
       
-      <!-- Tarjeta 1 -->
       <div class="max-w-6xl text-right items-end">
         <div class="glass-card p-6 rounded-3xl shadow-lg animate-on-scroll">
           <div class="grid lg:grid-cols-2 gap-6 items-center">
             <div>
-              <a href="https://www.licmarcelabarbero.com"><h3 class="text-3xl text-section font-extrabold mb-4 text-left">PATIENT MANAGEMENT SYSTEM <i class="bi bi-link-45deg"></i></h3></a>
-              <p class=" text-section text-lg text-white text-justify">
-                Web platform for occupational therapy.
-                Patients register personal data, the therapist promotes them to medical records when needed.
-                Features include image uploads, insurance tracking, and medical referrals.
-                Focused on clarity, privacy, and efficiency.
+              <a href="https://www.licmarcelabarbero.com" target="_blank" rel="noopener">
+                <h3 class="text-3xl text-section font-extrabold mb-4 text-left">PATIENT MANAGEMENT SYSTEM <i class="bi bi-link-45deg"></i></h3>
+              </a>
+              <p class="text-section text-lg text-white text-justify">
+                Currently operational web platform for occupational therapy, actively managing over 1000+ registered patients. Patients independently register personal data, and the therapist promotes them to official medical records when needed. Features include secure image uploads, insurance tracking, and medical referrals.
               </p>
             </div>
-            <img src="./assets/patient_management_system-image_1.png" class="rounded-lg shadow-lg scale-on-hover" alt="">
+            <img src="./assets/patient_management_system-image_1.png" class="rounded-lg shadow-lg scale-on-hover" alt="Patient Management Platform">
           </div>
           <div class="grid lg:grid-cols-2 gap-6 mt-6 items-center">
-            <img src="./assets/patient_management_system-image_2.png" class="rounded-lg shadow-lg scale-on-hover" alt="">
-            <p class="text-justify text-lg text-section">
-              Built to streamline the therapist’s workflow 
-              while offering a friendly and secure
-              experience for patients. The system centralizes clinical and administrative data,
-              enabling faster access and better continuity of care.
-            </p>
+            <img src="./assets/patient_management_system-image_2.png" class="rounded-lg shadow-lg scale-on-hover" alt="Medical Records Interface">
+            <div class="flex flex-col gap-4">
+              <p class="text-justify text-lg text-section">
+                Built to streamline administrative workflows while offering a secure experience. Developed entirely with PHP, MySQL, and Bootstrap. The frontend architecture intentionally omits JavaScript to guarantee a lightweight, fast-loading, and highly accessible interface across all devices.
+              </p>
+              <div class="flex flex-wrap gap-2 justify-end mt-2">
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">PHP</span>
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">MySQL</span>
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">Bootstrap</span>
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">Lightweight Architecture</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Tarjeta 2 -->
       <div class="max-w-6xl text-right items-end">
         <div class="glass-card p-6 rounded-3xl shadow-lg animate-on-scroll">
           <div class="grid lg:grid-cols-2 gap-6 items-center">
             <div>
-              <a href="https://www.curseforge.com/minecraft/mc-mods/bloody-hell"><h3 class="text-3xl text-section font-extrabold mb-4 text-left">BLOODYHELL! A MINECRAFT MOD <i class="bi bi-link-45deg"></i></h3></a>
-              <p class="text-section text-lg text-justify">
-                Bloody Hell! is a Minecraft mod built entirely in Java using the Forge modding API.
-                It features a dark, blood-themed dimension, custom mechanics, and unique entities.
-                Through this project, I strengthened my object-oriented programming skills and deepened my understanding of game logic,
-                custom rendering, and modular system design within a complex sandbox environment.
+              <a href="https://www.curseforge.com/minecraft/mc-mods/bloody-hell" target="_blank" rel="noopener">
+                <h3 class="text-3xl text-section font-extrabold mb-4 text-left">BLOODY HELL! A MINECRAFT MOD <i class="bi bi-link-45deg"></i></h3>
+              </a>
+              <p class="text-section text-lg text-white text-justify">
+                A large-scale game modification developed entirely in Java using the Forge API. It expands the core game engine by implementing custom dimensions, complex entity behaviors, and advanced functional mechanics.
               </p>
             </div>
-            <img src="./assets/bloody_hell-image_1.png" class="rounded-lg shadow-lg scale-on-hover" alt="">
+            <img src="./assets/bloody_hell-image_1.png" class="rounded-lg shadow-lg scale-on-hover" alt="Custom Dimension Environment">
           </div>
           <div class="grid lg:grid-cols-2 gap-6 mt-6 items-center">
-            <img src="./assets/bloody_hell-image_2.png" class="rounded-lg shadow-lg scale-on-hover" alt="">
+            <img src="./assets/bloody_hell-image_2.png" class="rounded-lg shadow-lg scale-on-hover" alt="Custom Rendering and Entity Logic">
+            <div class="flex flex-col gap-4">
+              <p class="text-justify text-lg text-section">
+                The project emphasizes object-oriented programming principles and modular system design within a highly constrained sandbox environment. Key technical implementations include custom rendering pipelines utilizing BlockEntityRenderers, event-driven state management, and optimized particle generation.
+              </p>
+              <div class="flex flex-wrap gap-2 justify-end mt-2">
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">Java</span>
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">Forge API</span>
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">OOP</span>
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">Event-Driven Architecture</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
+      <div class="max-w-6xl text-right items-end">
+        <div class="glass-card p-6 rounded-3xl shadow-lg animate-on-scroll">
+          <div class="grid lg:grid-cols-2 gap-6 items-center">
+            <div>
+              <a href="https://github.com/Tomasgithub01/ProgWeb" target="_blank" rel="noopener">
+                <h3 class="text-3xl text-section font-extrabold mb-4 text-left">GAMES LIBRARY MANAGER <i class="bi bi-github"></i></h3>
+              </a>
+              <p class="text-section text-lg text-white text-justify">
+                Full-stack web application developed in Go to manage and track personal video game libraries. It integrates directly with the Steam API to fetch real-time game data and images, dynamically populating the catalog without heavy local storage requirements.
+              </p>
+            </div>
+            <img src="./assets/progweb-image_1.png" class="rounded-lg shadow-lg scale-on-hover" alt="Games Library Dashboard">
+          </div>
+          <div class="grid lg:grid-cols-2 gap-6 mt-6 items-center">
+            <img src="./assets/progweb-image_2.png" class="rounded-lg shadow-lg scale-on-hover" alt="Game Status Tracking">
+            <div class="flex flex-col gap-4">
+              <p class="text-justify text-lg text-section">
+                The platform features a secure authentication system and custom tracking states. By utilizing HTMX, the project implements a lightweight Server-Side Rendering (SSR) architecture, entirely avoiding the overhead of Client-Side Rendering (CSR) for seamless and fast user interactions. Everything is backed by a PostgreSQL database and containerized using Docker.
+              </p>
+              <div class="flex flex-wrap gap-2 justify-end mt-2">
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">Go</span>
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">HTMX</span>
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">SSR</span>
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">PostgreSQL</span>
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">Docker</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       
-      
+      <div class="max-w-6xl text-right items-end">
+        <div class="glass-card p-6 rounded-3xl shadow-lg animate-on-scroll">
+          <div class="grid lg:grid-cols-2 gap-6 items-center">
+            <div>
+              <a href="https://github.com/AgusDropOut/Compilador" target="_blank" rel="noopener">
+                <h3 class="text-3xl text-section font-extrabold mb-4 text-left">WEBASSEMBLY COMPILER <i class="bi bi-github"></i></h3>
+              </a>
+              <p class="text-section text-lg text-white text-justify">
+                A custom compiler built from scratch that translates a statically typed, high-level language into WebAssembly (Wasm) executable code. It implements full lexical, syntactic, and semantic analysis phases.
+              </p>
+            </div>
+            <img src="./assets/compiler-image_1.png" class="rounded-lg shadow-lg scale-on-hover" alt="Compiler Architecture">
+          </div>
+          <div class="grid lg:grid-cols-2 gap-6 mt-6 items-center">
+            <img src="./assets/compiler-image_2.png" class="rounded-lg shadow-lg scale-on-hover" alt="WebAssembly Output">
+            <div class="flex flex-col gap-4">
+              <p class="text-justify text-lg text-section">
+                The architecture uses tercetos (triples) for its intermediate representation to structure the translation process before generating the final Wasm text format. It also features an integrated local server that automatically executes the compiled binary, displaying the standard output via an interactive browser console pop-out.
+              </p>
+              <div class="flex flex-wrap gap-2 justify-end mt-2">
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">Java</span>
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">Yacc/CUP</span>
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">WebAssembly</span>
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">Compiler Theory</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-6xl text-right items-end">
+        <div class="glass-card p-6 rounded-3xl shadow-lg animate-on-scroll">
+          <div class="grid lg:grid-cols-2 gap-6 items-center">
+            <div>
+              <a href="https://github.com/AgusDropOut/Teoria-de-la-informacion" target="_blank" rel="noopener">
+                <h3 class="text-3xl text-section font-extrabold mb-4 text-left">INFORMATION THEORY & COMPRESSION <i class="bi bi-github"></i></h3>
+              </a>
+              <p class="text-section text-lg text-white text-justify">
+                A mathematical data analysis project that applies Information Theory concepts to real-world meteorological datasets. It models weather patterns using Markov Chains and utilizes Monte Carlo simulations to calculate stationary probabilities and mean recurrence times.
+              </p>
+            </div>
+            <img src="./assets/infotheory-image_1.png" class="rounded-lg shadow-lg scale-on-hover" alt="Monte Carlo Convergence Graph">
+          </div>
+          <div class="grid lg:grid-cols-2 gap-6 mt-6 items-center">
+            <img src="./assets/infotheory-image_2.png" class="rounded-lg shadow-lg scale-on-hover" alt="Huffman Compression Output">
+            <div class="flex flex-col gap-4">
+              <p class="text-justify text-lg text-section">
+                The core of the project focuses on algorithmic efficiency and data encoding. It features a custom, from-scratch implementation of the Huffman compression algorithm (utilizing min-heaps and binary trees) to verify Shannon's Source Coding Theorem. It also calculates entropy, channel noise, and mutual information.
+              </p>
+              <div class="flex flex-wrap gap-2 justify-end mt-2">
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">Python</span>
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">Algorithms</span>
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">Data Compression</span>
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">Statistics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-6xl text-right items-end">
+        <div class="glass-card p-6 rounded-3xl shadow-lg animate-on-scroll">
+          <div class="grid lg:grid-cols-2 gap-6 items-center">
+            <div>
+              <a href="https://github.com/Arimochin/TPE-FundamentosCienciaDatos" target="_blank" rel="noopener">
+                <h3 class="text-3xl text-section font-extrabold mb-4 text-left">SPOTIFY DATA EXPLORATION <i class="bi bi-github"></i></h3>
+              </a>
+              <p class="text-section text-lg text-white text-justify">
+                A comprehensive Exploratory Data Analysis (EDA) project investigating the acoustic and metadata features of 90s music covers to determine factors influencing song popularity. Developed using Python, Pandas, and Scikit-learn.
+              </p>
+            </div>
+            <img src="./assets/datascience-image_1.png" class="rounded-lg shadow-lg scale-on-hover" alt="PCA Dimensionality Reduction">
+          </div>
+          <div class="grid lg:grid-cols-2 gap-6 mt-6 items-center">
+            <img src="./assets/datascience-image_2.png" class="rounded-lg shadow-lg scale-on-hover" alt="Clustering Evaluation Metrics">
+            <div class="flex flex-col gap-4">
+              <p class="text-justify text-lg text-section">
+                The analysis goes beyond simple visualizations by applying rigorous statistical hypothesis testing (ANOVA, Kruskal-Wallis, Mann-Whitney U) to validate correlations between audio features (e.g., Energy, Loudness, Acousticness). It also implements dimensionality reduction (PCA, t-SNE) and compares K-Means with Hierarchical Clustering to identify distinct musical subgenres based on audio data.
+              </p>
+              <div class="flex flex-wrap gap-2 justify-end mt-2">
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">Python</span>
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">Scikit-learn</span>
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">Pandas</span>
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">Statistical Testing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
+  
 
   <div id="video-container" class="hidden fixed inset-0 z-40 flex flex-col items-center justify-center bg-black/80 space-y-4">
     <video id="miku-video" src="./assets/miku_beam.mp4" class="max-w-full max-h-[80vh] rounded-lg shadow-lg" preload="auto"></video>
