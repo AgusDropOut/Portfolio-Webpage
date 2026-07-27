@@ -1,63 +1,4 @@
-
-  (function () {
-    const section = document.getElementById('projects');
-    const canvas = document.getElementById('projects-stars');
-    const ctx = canvas.getContext('2d');
-
-    const COLORS = ['#ffffff', '#83DAD5', '#E12885'];
-    const STAR_COUNT = 120;
-
-    let stars = [];
-
-    function resizeCanvas() {
-      const rect = section.getBoundingClientRect();
-      canvas.width  = rect.width;
-      canvas.height = rect.height;
-
-      
-      stars = Array.from({ length: STAR_COUNT }, () => ({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        r: Math.random() * 1.6 + 0.4,             
-        v: Math.random() * 0.9 + 0.2,             
-        color: COLORS[Math.floor(Math.random() * COLORS.length)],
-        alpha: Math.random() * 0.6 + 0.4         
-      }));
-    }
-
-    function draw() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      for (const s of stars) {
-        s.y += s.v;
-        if (s.y - s.r > canvas.height) {
-            s.y = - (Math.random() * 500 + s.r); 
-            s.x = Math.random() * canvas.width;
-            s.v = Math.random() * 0.9 + 0.2;
-            s.r = Math.random() * 1.6 + 0.4;
-            s.color = COLORS[Math.floor(Math.random() * COLORS.length)];
-            s.alpha = Math.random() * 0.6 + 0.4;
-        }
-
-        ctx.globalAlpha = s.alpha;
-        ctx.fillStyle = s.color;
-        ctx.beginPath();
-        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-        ctx.fill();
-      }
-
-      ctx.globalAlpha = 1;
-      requestAnimationFrame(draw);
-    }
-
-    
-    window.addEventListener('resize', resizeCanvas);
-
-    resizeCanvas();
-    draw();
-  })();
-
- document.addEventListener('mousemove', (e) => {
+document.addEventListener('mousemove', (e) => {
   const sun = document.getElementById('vaporwave-sun');
   
   const centerX = window.innerWidth / 2;
@@ -87,20 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
   elements.forEach(el => observer.observe(el));
 });
 
-
-
-// =========================
-// Config
-// =========================
 const STAR_DELAY_MS = 10000;
 const LOOP_MIN_DELAY = 80;  
 const LOOP_MAX_DELAY = 200; 
 const BURSTS_PER_LOOP = 6;  
 const PARTICLES_PER_BURST = 120; 
 
-// =========================
-// Estado
-// =========================
 let partyActive = false;
 let confettiTimer = null;
 let starDelayTimer = null;
@@ -115,9 +48,6 @@ const defaults = {
   shapes: ['star']
 };
 
-// =========================
-// Confetti
-// =========================
 function megaBurst() {
   for (let i = 0; i < BURSTS_PER_LOOP; i++) {
     confetti({
@@ -147,9 +77,6 @@ function stopConfettiLoop() {
   if (confetti && typeof confetti.reset === 'function') confetti.reset();
 }
 
-// =========================
-// Video + control del evento
-// =========================
 function startParty() {
   if (partyActive) return;
   partyActive = true;
@@ -164,13 +91,11 @@ function startParty() {
   video.currentTime = 0;
   video.play();
 
-
   starDelayTimer = setTimeout(() => {
     if (!partyActive) return;
     startConfettiLoop();
   }, STAR_DELAY_MS);
 
- 
   video.onended = () => stopParty();
 }
 
@@ -195,8 +120,5 @@ function stopParty() {
   stopConfettiLoop();
 }
 
-// =========================
-// Listeners
-// =========================
 document.getElementById('special-btn').addEventListener('click', startParty);
 document.getElementById('close-party').addEventListener('click', stopParty);
