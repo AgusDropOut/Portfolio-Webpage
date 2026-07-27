@@ -56,7 +56,7 @@
       <div class="max-w-2xl text-left sm:text-left  border-l-2 border-b-2 border-white">
         <h1 class="say-hi text-6xl font-extrabold section-title animate-on-scroll pl-7 pb-1">HI, I’M AGUS</h1>
         <p class="normal-text mt-3 text-lg italic pl-7 pb-4 ">
-        I’m an advanced<strong class="font-extrabold"> Software Engineering </strong> student with a strong passion for designing and developing responsive, secure, and efficient systems for data management. I focus on building solutions that are not only functional but also optimized for performance, being confortable on both high and low level programing. <br>
+        I’m an advanced<strong class="font-extrabold"> Software Engineering </strong> student with a strong passion for designing and developing responsive, secure, and efficient software. I focus on building solutions that are not only functional but also optimized for performance, being confortable on both high and low level programing. <br>
          I enjoy working across all layers of a system, from architecture to implementation, and focus on writing clean, maintainable, and scalable code. My academic background, combined with a hands-on approach to problem-solving, allows me to create solutions that are orientated to real-world needs.
         </p>
       </div>
@@ -128,36 +128,6 @@
                 [&>div:nth-child(odd)]:mr-auto 
                 [&>div:nth-child(even)]:ml-auto">
       
-      <div class="max-w-6xl text-right items-end">
-        <div class="glass-card p-6 rounded-3xl shadow-lg animate-on-scroll">
-          <div class="grid lg:grid-cols-2 gap-6 items-center">
-            <div>
-              <a href="https://www.licmarcelabarbero.com" target="_blank" rel="noopener">
-                <h3 class="text-3xl text-section font-extrabold mb-4 text-left">PATIENT MANAGEMENT SYSTEM <i class="bi bi-link-45deg"></i></h3>
-              </a>
-              <p class="text-section text-lg text-white text-justify">
-                Currently operational web platform for occupational therapy, actively managing over 1000+ registered patients. Patients independently register personal data, and the therapist promotes them to official medical records when needed. Features include secure image uploads, insurance tracking, and medical referrals.
-              </p>
-            </div>
-            <img src="./assets/patient_management_system-image_1.png" class="rounded-lg shadow-lg scale-on-hover" alt="Patient Management Platform">
-          </div>
-          <div class="grid lg:grid-cols-2 gap-6 mt-6 items-center">
-            <img src="./assets/patient_management_system-image_2.png" class="rounded-lg shadow-lg scale-on-hover" alt="Medical Records Interface">
-            <div class="flex flex-col gap-4">
-              <p class="text-justify text-lg text-section">
-                Built to streamline administrative workflows while offering a secure experience. Developed entirely with PHP, MySQL, and Bootstrap. The frontend architecture intentionally omits JavaScript to guarantee a lightweight, fast-loading, and highly accessible interface across all devices.
-              </p>
-              <div class="flex flex-wrap gap-2 justify-end mt-2">
-                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">PHP</span>
-                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">MySQL</span>
-                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">Bootstrap</span>
-                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">Lightweight Architecture</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div class="max-w-6xl text-right items-end">
         <div class="glass-card p-6 rounded-3xl shadow-lg animate-on-scroll">
           <div class="grid lg:grid-cols-2 gap-6 items-center">
@@ -250,7 +220,7 @@
         </div>
       </div>
 
-      <!-- VOXEL ENGINE -->
+     <!-- VOXEL ENGINE -->
       <div class="max-w-6xl text-right items-end">
         <div class="glass-card p-6 rounded-3xl shadow-lg animate-on-scroll">
           <div class="grid lg:grid-cols-2 gap-6 items-center">
@@ -259,22 +229,55 @@
                 <h3 class="text-3xl text-section font-extrabold mb-4 text-left">VOXEL ENGINE <i class="bi bi-github"></i></h3>
               </a>
               <p class="text-section text-lg text-white text-justify">
-                A procedural voxel-based generation engine featuring infinite terrain creation, dynamic mesh building, and real-time block modification inspired by modern sandbox games.
+                A high-performance 3D Voxel Engine built from scratch to explore low-level graphics programming. It transitions from traditional CPU-bound simulations to a fully GPU-driven rendering pipeline based on AZDO (Approaching Zero Driver Overhead) principles.
               </p>
             </div>
-            <img src="./assets/gen-low-res-smaller.gif" class="rounded-lg shadow-lg scale-on-hover" alt="Voxel Terrain Generation">
+            <!-- Added aspect-video, w-full, and object-cover to force a 16:9 rectangular shape -->
+            <img src="./assets/gen-low-res-smaller.gif" class="w-full aspect-video object-cover rounded-lg shadow-lg scale-on-hover" alt="Voxel Terrain Generation">
           </div>
           <div class="grid lg:grid-cols-2 gap-6 mt-6 items-center">
-            <img src="./assets/vxgi-low-res.gif" class="rounded-lg shadow-lg scale-on-hover" alt="Voxel Engine Chunking">
+            <!-- Added aspect-video, w-full, and object-cover -->
+            <img src="./assets/vxgi-low-res.gif" class="w-full aspect-video object-cover rounded-lg shadow-lg scale-on-hover" alt="Voxel Global Illumination">
             <div class="flex flex-col gap-4">
               <p class="text-justify text-lg text-section">
-                Focuses on algorithmic efficiency by utilizing chunking systems and greedy meshing techniques to reduce vertex counts. Multithreading is applied to handle terrain generation asynchronously without dropping frames.
+                The architecture leverages Multi-Draw Indirect (MDI) and massive VRAM buffers (SSBOs) to eliminate CPU-to-driver bottlenecks. It implements advanced rendering techniques, including Cascaded Shadow Maps for infinite terrain distances and Voxel Global Illumination (VXGI) for real-time indirect light bouncing.
               </p>
               <div class="flex flex-wrap gap-2 justify-end mt-2">
-                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">C++</span>
-                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">OpenGL</span>
-                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">Procedural Generation</span>
-                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">Multithreading</span>
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">C++23</span>
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">OpenGL 4.6</span>
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">AZDO Pipeline</span>
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">VXGI</span>
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">Cascaded Shadows</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-6xl text-right items-end">
+        <div class="glass-card p-6 rounded-3xl shadow-lg animate-on-scroll">
+          <div class="grid lg:grid-cols-2 gap-6 items-center">
+            <div>
+              <a href="https://www.licmarcelabarbero.com" target="_blank" rel="noopener">
+                <h3 class="text-3xl text-section font-extrabold mb-4 text-left">PATIENT MANAGEMENT SYSTEM <i class="bi bi-link-45deg"></i></h3>
+              </a>
+              <p class="text-section text-lg text-white text-justify">
+                Currently operational web platform for occupational therapy, actively managing over 1000+ registered patients. Patients independently register personal data, and the therapist promotes them to official medical records when needed. Features include secure image uploads, insurance tracking, and medical referrals.
+              </p>
+            </div>
+            <img src="./assets/patient_management_system-image_1.png" class="rounded-lg shadow-lg scale-on-hover" alt="Patient Management Platform">
+          </div>
+          <div class="grid lg:grid-cols-2 gap-6 mt-6 items-center">
+            <img src="./assets/patient_management_system-image_2.png" class="rounded-lg shadow-lg scale-on-hover" alt="Medical Records Interface">
+            <div class="flex flex-col gap-4">
+              <p class="text-justify text-lg text-section">
+                Built to streamline administrative workflows while offering a secure experience. Developed entirely with PHP, MySQL, and Bootstrap. The frontend architecture intentionally omits JavaScript to guarantee a lightweight, fast-loading, and highly accessible interface across all devices.
+              </p>
+              <div class="flex flex-wrap gap-2 justify-end mt-2">
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">PHP</span>
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">MySQL</span>
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">Bootstrap</span>
+                <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-bold">Lightweight Architecture</span>
               </div>
             </div>
           </div>
